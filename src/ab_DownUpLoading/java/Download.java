@@ -1,13 +1,13 @@
-package aa_bufferedImage;
+package ab_DownUpLoading.java;
 
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 
-public class ab_DownUpLoading {
+public class Download {
 
-	public ab_DownUpLoading() {
+	public Download() {
 		// TODO Auto-generated constructor stub
 	}
 

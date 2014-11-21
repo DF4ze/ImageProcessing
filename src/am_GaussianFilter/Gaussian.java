@@ -17,7 +17,7 @@ public class Gaussian {
 	      Mat destination = new Mat(source.rows(),source.cols(),source.type());
 	      
 		   System.out.println("Proc Img");
-		   Size maSize = new Size(101,1);
+		   Size maSize = new Size(1,101);
 	      Imgproc.GaussianBlur(source, destination, maSize, 0);
 	      
 		   System.out.println("Writing Img");

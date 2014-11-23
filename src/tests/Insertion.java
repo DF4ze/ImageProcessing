@@ -7,11 +7,13 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.highgui.Highgui;
 
 public class Insertion {
 	   public static void main( String[] args ) throws IOException {
+	         System.loadLibrary( Core.NATIVE_LIBRARY_NAME );
 		   
 		   System.out.println("Getting largeImg");
 		   Mat source1 = Highgui.imread("images/digital_image_processing.jpg", Highgui.CV_LOAD_IMAGE_COLOR);
@@ -22,7 +24,7 @@ public class Insertion {
 		   byte[] data = ((DataBufferByte) image.getRaster().getDataBuffer()).getData();
 		   
 		   System.out.println("Put 2 in 1");
-		   source1.put(15, 150, data);
+		   source1.put(0, 0, data);
 		   
 		   Highgui.imwrite("images/insertion.jpg", source1);
 	   }
